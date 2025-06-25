@@ -9,13 +9,13 @@ switch ($action) {
     case 'login':
     case 'register':
     case 'logout':
-        require 'api/auth.php'; break;
+        require 'auth.php'; break;
     // CSRF
     case 'get_csrf_token':
-        require 'api/csrf.php'; break;
+        require 'csrf.php'; break;
     // Course info
     case 'get_course':
-        require 'api/course.php'; break;
+        require 'course.php'; break;
     // Round actions
     case 'start_round':
     case 'submit_round':
@@ -25,10 +25,10 @@ switch ($action) {
     case 'get_round_details':
     case 'edit_round':
     case 'delete_round':
-        require 'api/round.php'; break;
+        require 'round.php'; break;
     // Distance
     case 'calculate_distances':
-        require 'api/distance.php'; break;
+        require 'distance.php'; break;
     default:
         echo json_encode(['error'=>'Unknown or missing action']);
 }
