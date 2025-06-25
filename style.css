@@ -1,0 +1,75 @@
+body {
+  background-color: #f3f4f6;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.z-dropdown {
+  z-index: 9999 !important;
+}
+
+.modal-bg {
+  background: rgba(0,0,0,0.5);
+}
+
+/* Buttons and forms */
+button, input[type="button"], input[type="submit"] {
+  transition: background 0.15s, color 0.15s;
+}
+
+button:focus, input[type="button"]:focus, input[type="submit"]:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Score slider customization */
+#scoreSlider {
+  accent-color: #2563eb;
+}
+
+/* Profile and round history */
+#roundHistory div {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#roundHistory details summary {
+  cursor: pointer;
+}
+
+#summary p {
+  margin-bottom: 0.25rem;
+}
+
+#courseInfo {
+  margin-top: 0.5rem;
+  color: #2563eb;
+}
+
+@media (max-width: 700px) {
+  #map {
+    height: 250px;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+  h1, h2, h3 {
+    font-size: 1.1rem;
+  }
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 0.5rem 0;
+}
