@@ -215,7 +215,13 @@ $('#loginForm').submit(async function(e) {
     const email = $('#loginEmail').val();
     const password = $('#loginPassword').val();
     try {
-        const response = await $.post('api.php?action=login', JSON.stringify({ email, password }));
+        const response = await $.ajax({
+            url: 'api.php?action=login',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ email, password }),
+            dataType: 'json'
+        });
         if (response.success) {
             $('#userName').text(response.name);
             $('#authSection').addClass('hidden');
